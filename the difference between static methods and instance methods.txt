@@ -1,0 +1,24 @@
+静态方法和实例方法的区别主要体现在两个方面：
+The difference between static and instance methods
+ 
+在外部调用静态方法时，可以使用"类名.方法名"的方式，也可以使用"对象名.方法名"的方式。而实例方法只有后面这种方式。也就是说，调用静态方法可以无需创建对象。
+You can use the "class name" when calling static methods externally. Method name, or object name. Method name ". Instance methods have only the latter. That is, you can call a static method without creating an object.
+ 
+静态方法在访问本类的成员时，只允许访问静态成员（即静态成员变量和静态方法），而不允许访问实例成员变量和实例方法；实例方法则无此限制。
+When a static method accesses a member of the class, it only allows access to a static member (that is, static member variables and static methods), but not to instance member variables and instance methods. Instance methods do not have this limitation.
+ 
+下面几个例子展示了这一区别。
+The following examples illustrate this distinction.
+
+1、调用静态方法示例。  Here we call static methods for examples.
+ 
+//-----------hasStaticMethod.java-----------------
+public class hasStaticMethod{
+//定义一个静态方法
+public static void callMe(){
+　　System.out.println("This is a static method.");
+}
+}
+
+
+
